@@ -7,12 +7,12 @@ import Loading from '../ui/Loading'
 
 export default function Dashboard() {
 const {dashData,isLoading} = UseDashData()
-console.log(isLoading)
+
 if(isLoading) return <Loading/>
   return (
     <div className='bg-slate-100 h-auto'>
-        <HeroBanner data={dashData?.slice(1,3)}/>
-        <RecommendEvent data={dashData}/>
+        <HeroBanner data={dashData?.slice(0,4)}/>
+        <RecommendEvent data={dashData?.slice(0,5)}/>
         <LiveEvent/>
     </div>
   )

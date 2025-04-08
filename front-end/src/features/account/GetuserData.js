@@ -7,14 +7,12 @@ async function userdata() {
   
     try {
       const responce = await fetch(`${api}/userdatass`, {
-        method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
         },
       });
   
       const data = await responce.json()
-  
       if (!responce.ok) {
         toast.error(data.message || "Something went wrong");
         throw new Error(data.message);

@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import toast from "react-hot-toast";
 
-async function DashData() {
+async function DashData(params) {
 const api = import.meta.env.VITE_API_BACKEND
     try{
         const responce = await fetch(`${api}/events`)
@@ -16,12 +16,13 @@ const api = import.meta.env.VITE_API_BACKEND
     }
 }
 
-function UseDashData(){
+function UseDashData(params){
     const {data:dashData,isLoading} = useQuery({
-        queryKey:['dashdata'],
-        queryFn:DashData
+        queryKey:['dashdata',params],
+        queryFn:()=>DashData(params)
     })
     return {dashData,isLoading}
 }
 
 export default UseDashData
+

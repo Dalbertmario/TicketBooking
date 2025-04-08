@@ -10,6 +10,7 @@ import CheckoutPage from './pages/CheckoutPage';
 import Bookingsfront from './pages/Bookingsfront';
 import CategoryDisplay from './pages/CategoryDisplay';
 import Userpage from './pages/Userpage';
+import AllEvents from './pages/AllEvents';
 
 
 export default function App() {
@@ -24,7 +25,8 @@ const route = createBrowserRouter([{
   {path:'/checkout/:id',element:<CheckoutPage/>},
   {path:'/bookings',element:<Bookingsfront/>},
   {path:'/category/:cat',element:<CategoryDisplay/>},
-  {path:'/profile',element:<Userpage/>}
+  {path:'/profile',element:<Userpage/>},
+  {path:'/allevent',element:<AllEvents/>}
 ]}
 ])
   return (

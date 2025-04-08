@@ -2,6 +2,8 @@ import React from 'react'
 import { useForm } from 'react-hook-form'
 import UseSignUp from '../features/account/signUp'
 import { useNavigate } from 'react-router-dom'
+import { LuLoaderCircle } from "react-icons/lu";
+
 
 export default function SignUp() {
 const {register,handleSubmit,watch,formState:{errors}} = useForm()
@@ -36,7 +38,7 @@ function handleForm(data){
     © 2025 YourCompanyName. All rights reserved.
   </p>
   </p>
-  <button onClick={()=>navigate('/signin')} className='text-blue-800 text-xs text-center'>SIGN IN</button>
+  <button disabled={isLoading} onClick={()=>navigate('/signin')} className='text-blue-800 text-xs text-center'>SIGN IN {isLoading && <LuLoaderCircle />}</button>
       </div>
      </div>
     </form>
