@@ -1,0 +1,9 @@
+#BACKEND
+cd backend
+npm install
+nodemon server.js
+
+#FRONT-END
+cd front-end
+npm run dev
+
