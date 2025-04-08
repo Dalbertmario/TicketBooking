@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+
+.inputForm {
+  @apply bg-slate-100 rounded-3xl py-3  px-2 focus:outline-red-400 focus:bg-slate-200 transition-all
+}
+
+.bntForm {
+   @apply bg-red-400 rounded-2xl text-white transition-all font-semibold py-2 hover:bg-white hover:outline-red-700 hover:text-black
+}
+
+.heading {
+  @apply font-semibold text-xl font-mono text-red-500 
+}
+
+.bashh1{
+  @apply text-3xl font-semibold text-white font-stretch-90%
+}
+
+.headings {
+  @apply font-semibold font-mono text-2xl text-center
+}
