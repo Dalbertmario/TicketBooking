@@ -40,7 +40,7 @@ export default function HeroBanner({ data }) {
               key={i}
               src={el?.image_url}
               alt={`Slide ${i}`}
-              className="w-full h-[400px] sm:h-[500px] md:h-[600px] object-cover hero-image"
+              className="w-full h-[400px] sm:h-[300px] md:h-[600px] object-cover hero-image"
             />
           ))}
         </div>

@@ -7,12 +7,12 @@ import UseNewBooking from '../features/bookings/newBooking';
 export default function CheckoutPage() {
 const { id } = useParams();
 const {data} =UseBookingDetails(id)
-const [selection,setselection]  = useState(1)
+// const [selection,setselection]  = useState(1)
 const {mutate:BookingMutate} = UseNewBooking()
 const token = JSON.parse(localStorage.getItem('token1'))
 const navigate = useNavigate()
 function handlebooking(data){
-    BookingMutate({...data,tickets:selection})
+    BookingMutate(data)
 }
 useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -42,14 +42,14 @@ function handleLogin(){
                 <p>Date :{DateFormating(el?.start_time)}</p>
                 <p>Time :{ConsertDate(el.start_time) > 12 ? ConsertDate(el.start_time) - 12 : el.start_time}.00 P.m</p>
                 <p>Venue : {el?.location}</p>
-                <select onChange={(e)=>setselection(e.target.value)}>
+                {/* <select onChange={(e)=>setselection(e.target.value)}>
                     <option disabled>Select No of seats required</option>
                     <option value={1}>1</option>
                     <option value={2}>2</option>
                     <option value={3}>3</option>
                     <option value={4}>4</option>
                     <option value={5}>5</option>
-                </select>
+                </select> */}
                 </div>
                 </div>
                 <div >

@@ -29,7 +29,7 @@ function Booking(){
         {datas?.map(el=>(
             <div className='outline-1 p-2 rounded-xl outline-slate-400 flex flex-col gap-4'>
                 <p className='flex flex-row items-center gap-4'><CiCalendar size={40}/> {DateFormating(el?.start_time)}</p>
-                <p className='flex flex-row items-center gap-4'><CiClock2 size={40}/>{ConsertDate(el.start_time) > 12 ? ConsertDate(el.start_time) - 12 : el.start_time}.00 P.m </p>
+                <p className='flex flex-row items-center gap-4'><CiClock2 size={40}/>{ConsertDate(el.start_time) > 12 ? Math.abs(ConsertDate(el.start_time) - 12) : Math.abs(el.start_time)}.00 P.m </p>
                 <p className='flex flex-row items-center gap-4'><FaUserClock size={40}/> {timeFormating(el)} Hours</p>
                 <p className='flex flex-row items-center gap-4'><IoPeopleOutline size={40}/>5+ years</p>
                 <p  className='flex flex-row items-center gap-4'><CiLocationOn size={40}/> {el.location}</p>

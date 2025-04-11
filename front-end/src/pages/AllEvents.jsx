@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Usefilrting from '../features/DashData/Filtering'
 import Loading from '../ui/Loading'
 import { NavLink } from 'react-router-dom'
@@ -6,7 +6,9 @@ import { NavLink } from 'react-router-dom'
 export default function AllEvents() {
   const [tagsClick,settagesClick] = useState(null)
   const { data, isLoading } = Usefilrting(tagsClick)
-  console.log(data)
+   useEffect(() => {
+       window.scrollTo({ top: 0, behavior: 'smooth' })
+     }, [])
   if(isLoading) return <Loading/>
   return (
     <div className='max-w-[1000px] m-auto mt-[85px] h-screen'>

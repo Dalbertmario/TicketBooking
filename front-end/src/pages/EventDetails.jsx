@@ -16,7 +16,6 @@ export default function EventDetails() {
     const {data:YouMayLike} =  UseMayLike()
     const [readMore,setReadMore] = useState(false)
     const [TermsButton,setTermsButton] = useState(false)
-    console.log(data)
 
 
 useEffect(() => {
