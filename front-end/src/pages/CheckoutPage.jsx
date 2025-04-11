@@ -40,7 +40,7 @@ function handleLogin(){
                 <p className='outline-1 outline-slate-400 p-2 rounded-t-lg'>{el?.name}</p>
                 <div className='outline-1 flex flex-col gap-4 outline-slate-400 p-2'>
                 <p>Date :{DateFormating(el?.start_time)}</p>
-                <p>Time :{ConsertDate(el.start_time) > 12 ? ConsertDate(el.start_time) - 12 : el.start_time}.00 P.m</p>
+                <p>Time :{ConsertDate(el?.start_time) > 12 ? ConsertDate(el?.start_time) - 12 : el?.start_time}.00 P.m</p>
                 <p>Venue : {el?.location}</p>
                 {/* <select onChange={(e)=>setselection(e.target.value)}>
                     <option disabled>Select No of seats required</option>

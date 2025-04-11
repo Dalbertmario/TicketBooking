@@ -5,8 +5,6 @@ import UseUserDetials from "../features/account/GetuserData"
 
 export default function Userpage() {
 const navigate = useNavigate()
-const {data} = UseUserDetials()
-console.log(data)
 const token = JSON.parse(localStorage.getItem('token1'))
 useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' })

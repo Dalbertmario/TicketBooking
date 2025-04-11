@@ -19,15 +19,15 @@ export default function AllEvents() {
         </div>
       <div className='flex flex-row justify-center flex-wrap gap-4 p-5'>
     
-        {data?.data.map((el, index) => (
+        {data?.data?.map((el, index) => (
          <NavLink to={`/event/${el.id}`}>  <div key={index} className='shadow-xl p-2 flex flex-col gap-3 hover:translate-x-[10px]  hover:translate-y-[10px] transition-all rounded-2xl' >
             <img
               className='max-h-[350px] rounded-lg max-w-[300px]'
-              src={el.small_image}
+              src={el?.small_image}
               alt={`event-${index}`}
             />
-            <h1>{el.name.split(' ').slice(0,4).join(' ')}</h1>
-            <p>{el.location}</p>
+            <h1>{el?.name.split(' ').slice(0,4).join(' ')}</h1>
+            <p>{el?.location}</p>
           </div>
           </NavLink>
         ))}
